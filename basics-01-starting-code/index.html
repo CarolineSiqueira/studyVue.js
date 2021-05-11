@@ -18,7 +18,8 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
-      <p>{{ couserGoal }}</p>
+      <!--<p v-html="outputGoal()"><p> define que o conteúdo deve ser tratado como html -->
+      <p>{{ outputGoal() }}</p>
       <p>Aprenda mais <a v-bind:href="vueLink">sobre Vue.js</p>
     </section>
   </body>
