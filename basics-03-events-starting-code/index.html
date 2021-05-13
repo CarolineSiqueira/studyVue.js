@@ -22,15 +22,9 @@
       <button v-on:click="remove">Remove</button> 
       <!--Ex.de modificadores:v-on:click.right="" -->
       <p>Result: {{ counter }}</p>
-      <input type="text"
-       v-on:input="setName"
-       v-on:keyup.enter="confirmedInput"
-       />
-      <p>Your name: {{ confirmedName }}</p>
-      <form v-on:submit.prevent="submitForm"> <!--Previne o carregamento padrão da página-->
-        <input type="text">
-        <button>Sign up</button>
-      </form>
+      <input type="text" v-model="name"/>
+      <button v-on:click="resetInput">Reset Input</button>
+      <p>Your name: {{ name }}</p>
     </section>
   </body>
 </html>
