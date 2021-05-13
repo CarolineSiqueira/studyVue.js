@@ -6,9 +6,18 @@ const app = Vue.createApp({
       confirmedName: ''
     };
   },
+  computed: {
+    fullname() {
+      console.log('Running again...');
+      if(this.name === ''){
+        return '';
+      }
+        return this.name + '' + 'Siqueira';
+    }
+  },
   methods: {
-    confirmedInput() {
-      this.confirmedName=this.name;
+    resetInput() {
+      this.name= '';
     },
     submitForm() {
       alert('Submitted!');
