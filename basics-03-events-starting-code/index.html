@@ -19,8 +19,8 @@
     <section id="events">
       <h2>Events in Action</h2>
       <button v-on:click="add">Add</button>
-      <button v-on:click="remove">Remove</button> 
-      <!--Ex.de modificadores:v-on:click.right="" -->
+      <button v-on:click="remove">Remove</button> <!--Outro ex.de modificadores:v-on:click.right="" -->
+      <p v-once>Iniciando contador: {{ counter }}</p> <!--Bloqueia valor inicial-->
       <p>Result: {{ counter }}</p>
       <input type="text"
        v-on:input="setName"
