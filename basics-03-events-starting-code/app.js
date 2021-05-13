@@ -3,21 +3,47 @@ const app = Vue.createApp({
     return {
       counter: 0,
       name:'',
-      confirmedName: ''
+      lastName:''
+      //fullname: ''
+      
     };
+  },
+  
+  watch:{
+    counter(value) {
+      if(value > 10) {
+        this.counter = 0;
+      }
+    }
+    //Uma alternativa a propriedade computada 
+ /*    name(value) {
+      if( value === ''){
+        this.fullname = '';
+      }else {
+        this.fullname = value + ' ' + this.lastName;
+      }
+    },
+    lastName(value) {
+      if( value === ''){
+        this.fullname = '';
+      }else {
+        this.fullname = this.name + ' ' + value;
+      }
+    } */
   },
   computed: {
     fullname() {
       console.log('Running again...');
-      if(this.name === ''){
+      if(this.name === '' || this.lastName === ''){
         return '';
       }
-        return this.name + '' + 'Siqueira';
+        return this.name + ' ' + this.lastName;
     }
   },
   methods: {
     resetInput() {
       this.name= '';
+      this.lastName= '';
     },
     submitForm() {
       alert('Submitted!');
