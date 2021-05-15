@@ -17,9 +17,11 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
+
+      <!--Movendo a lógica para o JavaScript usando computed-->
       <div 
         class="demo" 
-        v-bind:class="{active: boxASelected}" 
+        v-bind:class="boxAClasses" 
         v-on:click="boxSelected('A')">
       </div>
       <div
