@@ -24,9 +24,10 @@
         v-bind:class="boxAClasses" 
         v-on:click="boxSelected('A')">
       </div>
+
+      <!--Um array configura onde seu objeto configura qual classe deve ser adicionada-->
       <div
-        class="demo" 
-        v-bind:class="{active: boxBSelected}"
+        v-bind:class="['demo', {active: boxBSelected}]"
         v-on:click="boxSelected('B')">
       </div>
       <div
